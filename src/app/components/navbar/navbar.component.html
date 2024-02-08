@@ -1,1 +1,26 @@
-<p>navbar works!</p>
+<header class="sticky-header" [ngClass]="{ sticked: isSticky }">
+  <div class="container mx-auto flex justify-between h-16">
+    <div class="hidden md:flex items-center">
+      <h1 class="headline cursor-pointer">
+        <a>angular-saas-starter</a>
+      </h1>
+    </div>
+    <nav class="flex justify-center items-center">
+      <ul class="flex justify-center items-center gap-5">
+        <li class="nav-item">
+          <a>Features</a>
+        </li>
+        <li class="nav-item">
+          <a>Resources</a>
+        </li>
+        <li class="nav-item">
+          <a>Pricing</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="flex items-center gap-2">
+      <div class="m-button-outline">Sign In</div>
+      <div class="m-button-solid">Get Started</div>
+    </div>
+  </div>
+</header>

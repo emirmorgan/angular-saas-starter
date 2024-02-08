@@ -1,3 +1,53 @@
 @tailwind base
 @tailwind components
 @tailwind utilities
+
+$base-color: #F7F7F8
+$primary-color: #006AFF
+$secondary-color: #3287ff
+
+html
+    background-color: $base-color
+
+body
+    height: 1600px
+
+@mixin BaseButton()
+    display: inline-block
+    height: max-content
+    width: max-content
+
+    padding: 6px 12px
+    border-radius: 28px
+
+    font-weight: 500
+
+    cursor: pointer
+    transition: all 150ms ease-in
+    &:hover
+        background-color: $secondary-color
+
+.m-button-solid
+    @include BaseButton()
+    background-color: $primary-color
+    color: $base-color
+    
+.m-button-outline
+    @include BaseButton()
+    border: solid 1px
+    border-color: $primary-color
+    color: $primary-color
+    &:hover
+        background-color: $primary-color
+        color: $base-color
+
+.headline
+    font-weight: bold
+    font-size: 26px
+
+    color: #77aefc
+    background-image: -webkit-linear-gradient(45deg, #77aefc 23%, #006AFF 44%, #134387 96%)
+    background-clip: text
+    -webkit-background-clip: text
+    text-fill-color: transparent
+    -webkit-text-fill-color: transparent
