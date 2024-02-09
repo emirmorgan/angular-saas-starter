@@ -2,15 +2,37 @@
 @tailwind components
 @tailwind utilities
 
+@font-face
+    font-family: "Public Sans"
+    src: url("assets/Public Sans/regular-400.woff2") format("woff2")
+    font-weight: 400
+    font-style: normal
+
+@font-face
+    font-family: "Public Sans"
+    src: url("assets/Public Sans/regular-500.woff2") format("woff2")
+    font-weight: 500
+    font-style: normal
+
+@font-face
+    font-family: "Public Sans"
+    src: url("assets/Public Sans/regular-600.woff2") format("woff2")
+    font-weight: 600
+    font-style: normal
+
+@font-face
+    font-family: "Public Sans"
+    src: url("assets/Public Sans/regular-700.woff2") format("woff2")
+    font-weight: 700
+    font-style: normal
+
 $base-color: #F7F7F8
 $primary-color: #006AFF
 $secondary-color: #3287ff
 
 html
+    font-family: "Public Sans"
     background-color: $base-color
-
-body
-    height: 1600px
 
 @mixin BaseButton()
     display: inline-block
