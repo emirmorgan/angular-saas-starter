@@ -1,11 +1,11 @@
 <header class="sticky-header" [ngClass]="{ sticked: isSticky }">
-  <div class="container mx-auto flex justify-between h-16 px-2">
-    <div class="hidden md:flex items-center">
+  <div class="container mx-auto flex justify-between h-16 px-6">
+    <div class="flex items-center">
       <h1 class="headline cursor-pointer">
         <a>angular-saas</a>
       </h1>
     </div>
-    <nav class="flex justify-center items-center">
+    <nav class="hidden md:flex justify-center items-center">
       <ul class="flex justify-center items-center gap-5">
         <li class="nav-item">
           <a>Features</a>
@@ -18,9 +18,43 @@
         </li>
       </ul>
     </nav>
-    <div class="flex items-center gap-2">
+    <div class="hidden md:flex items-center gap-2">
       <div class="m-button-outline">Sign In</div>
       <div class="m-button-solid">Get Started</div>
+    </div>
+    <div
+      (click)="toggleMenu()"
+      class="flex md:hidden items-center text-2xl cursor-pointer"
+    >
+      <i class="fa-solid fa-bars"></i>
+    </div>
+    <div
+      *ngIf="isMenuOpen"
+      class="absolute top-0 left-0 min-h-screen w-full flex flex-col items-center bg-[#F7F7F8] overflow-hidden gap-4 px-6"
+    >
+      <div
+        (click)="toggleMenu()"
+        class="flex ml-auto text-3xl cursor-pointer mt-4"
+      >
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <nav class="flex flex-col justify-center items-center text-center">
+        <ul>
+          <li class="nav-item text-2xl p-3">
+            <a>Features</a>
+          </li>
+          <li class="nav-item text-2xl p-3">
+            <a>Resources</a>
+          </li>
+          <li class="nav-item text-2xl p-3">
+            <a>Pricing</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="flex flex-col items-center gap-2">
+        <div class="m-button-outline !w-[250px] !py-2">Sign In</div>
+        <div class="m-button-solid !w-[250px] !py-2">Get Started</div>
+      </div>
     </div>
   </div>
 </header>

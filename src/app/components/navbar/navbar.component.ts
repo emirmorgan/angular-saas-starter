@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common';
 })
 export class NavbarComponent {
   isSticky: boolean = false;
+  isMenuOpen: boolean = false;
 
   @HostListener('window:scroll', ['$event'])
   handleScroll() {
@@ -21,5 +22,18 @@ export class NavbarComponent {
       0;
 
     this.isSticky = scrollOffset > 80;
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    // Close the mobile menu if the window width exceeds a certain threshold (e.g., 768 pixels)
+    const screenWidth = event.target.innerWidth;
+    if (screenWidth >= 768) {
+      this.isMenuOpen = false;
+    }
+  }
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
   }
 }
