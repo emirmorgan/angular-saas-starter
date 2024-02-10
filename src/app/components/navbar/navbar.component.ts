@@ -26,7 +26,6 @@ export class NavbarComponent {
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
-    // Close the mobile menu if the window width exceeds a certain threshold (e.g., 768 pixels)
     const screenWidth = event.target.innerWidth;
     if (screenWidth >= 768) {
       this.isMenuOpen = false;

@@ -28,15 +28,9 @@
     >
       <i class="fa-solid fa-bars"></i>
     </div>
-    <div
-      *ngIf="isMenuOpen"
-      class="absolute top-0 left-0 min-h-screen w-full flex flex-col items-center bg-[#F7F7F8] overflow-hidden gap-4 px-6"
-    >
-      <div
-        (click)="toggleMenu()"
-        class="flex ml-auto text-3xl cursor-pointer mt-4"
-      >
-        <i class="fa-solid fa-xmark"></i>
+    <div class="mobile-menu" [ngClass]="{ open: isMenuOpen }">
+      <div (click)="toggleMenu()" class="flex ml-auto text-3xl cursor-pointer">
+        <i class="fa-solid fa-xmark my-auto"></i>
       </div>
       <nav class="flex flex-col justify-center items-center text-center">
         <ul>
