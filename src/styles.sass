@@ -37,9 +37,12 @@ html
     background-color: $base-color
     height: 100%
 
-body, html
-    overflow-x: hidden
-    min-height: 100vh
+body
+    min-height: 300vh
+
+html, body
+    position: relative
+    overflow-x: clip
 
 @mixin BaseButton()
     display: inline-block
@@ -76,7 +79,7 @@ body, html
     font-size: 26px
 
     color: #77aefc
-    background-image: -webkit-linear-gradient(45deg, #77aefc 23%, #006AFF 44%, #134387 96%)
+    background-image: -webkit-linear-gradient(45deg, #2e75d9 23%, #3788fa 44%, #6ca8fd 96%)
     background-clip: text
     -webkit-background-clip: text
     text-fill-color: transparent
