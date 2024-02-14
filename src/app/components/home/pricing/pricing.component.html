@@ -1,0 +1,126 @@
+<section id="pricing" class="my-12 p-12">
+  <div class="flex flex-col justify-center items-center text-center gap-4 mb-6">
+    <h1 class="text-[#343140] text-[38px] lg:text-5xl font-bold select-none">
+      Flexible Pricing.
+    </h1>
+    <p class="font-medium text-[#737778]">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    </p>
+  </div>
+  <div class="flex justify-center items-center mb-6 gap-2">
+    <label class="switch">
+      <input type="checkbox" (change)="isAnnually = !isAnnually" />
+      <span class="slider"></span>
+    </label>
+    <div class="flex justify-center items-center gap-2">
+      <span class="font-medium">Go yearly the best savings</span>
+      <div class="bg-primary text-white text-xs font-semibold p-2 rounded-md">
+        -20%
+      </div>
+    </div>
+  </div>
+  <div
+    class="grid grid-cols-1 md:grid-cols-3 place-items-center items-start max-w-fit mx-auto gap-6"
+  >
+    <div class="pricing-box hover:scale-105">
+      <div class="flex flex-col gap-3">
+        <span>Free</span>
+        <h3>$0 <span class="!text-sm">/mo</span></h3>
+      </div>
+      <div class="m-button-solid !w-full">Get Started</div>
+      <div class="border w-full bg-gray-300 rounded-full"></div>
+      <div class="flex flex-col">
+        <ul class="flex flex-col gap-2">
+          <li class="flex justify-center items-center gap-2">
+            <i class="fa-solid fa-check text-primary"></i>
+            <p>Lorem ipsum dolor sit amet</p>
+          </li>
+          <li class="flex justify-center items-center gap-2">
+            <i class="fa-solid fa-check text-primary"></i>
+            <p>Lorem ipsum dolor sit amet</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="pricing-box hover:scale-105">
+      <div class="flex flex-col gap-3">
+        <span>Plus</span>
+        <div class="flex items-center gap-2">
+          <h3>${{ getDiscountedPrice(plusPrice) }}</h3>
+          <div
+            *ngIf="isAnnually"
+            class="bg-primary w-fit text-white text-xs font-semibold select-none rounded-md p-2"
+          >
+            -20%
+          </div>
+        </div>
+      </div>
+      <div class="m-button-solid !w-full">Get Started</div>
+      <div class="border w-full bg-gray-300 rounded-full"></div>
+      <div class="flex flex-col">
+        <ul class="flex flex-col gap-2">
+          <li class="flex justify-center items-center gap-2">
+            <i class="fa-solid fa-check text-primary"></i>
+            <p>Lorem ipsum dolor sit amet</p>
+          </li>
+          <li class="flex justify-center items-center gap-2">
+            <i class="fa-solid fa-check text-primary"></i>
+            <p>Lorem ipsum dolor sit amet</p>
+          </li>
+          <li class="flex justify-center items-center gap-2">
+            <i class="fa-solid fa-check text-primary"></i>
+            <p>Lorem ipsum dolor sit amet</p>
+          </li>
+          <li class="flex justify-center items-center gap-2">
+            <i class="fa-solid fa-check text-primary"></i>
+            <p>Lorem ipsum dolor sit amet</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="pricing-box highlighted hover:scale-105">
+      <div class="flex flex-col gap-3">
+        <span>Pro</span>
+        <div class="flex items-center gap-2">
+          <h3>${{ getDiscountedPrice(proPrice) }}</h3>
+          <div
+            *ngIf="isAnnually"
+            class="bg-primary w-fit text-white text-xs font-semibold select-none rounded-md p-2"
+          >
+            -20%
+          </div>
+        </div>
+      </div>
+      <div class="m-button-solid !w-full">Get Started</div>
+      <div class="border w-full bg-gray-300 rounded-full"></div>
+      <div class="flex flex-col">
+        <ul class="flex flex-col gap-2">
+          <li class="flex justify-center items-center gap-2">
+            <i class="fa-solid fa-check text-primary"></i>
+            <p>Lorem ipsum dolor sit amet</p>
+          </li>
+          <li class="flex justify-center items-center gap-2">
+            <i class="fa-solid fa-check text-primary"></i>
+            <p>Lorem ipsum dolor sit amet</p>
+          </li>
+          <li class="flex justify-center items-center gap-2">
+            <i class="fa-solid fa-check text-primary"></i>
+            <p>Lorem ipsum dolor sit amet</p>
+          </li>
+          <li class="flex justify-center items-center gap-2">
+            <i class="fa-solid fa-check text-primary"></i>
+            <p>Lorem ipsum dolor sit amet</p>
+          </li>
+          <li class="flex justify-center items-center gap-2">
+            <i class="fa-solid fa-check text-primary"></i>
+            <p>Lorem ipsum dolor sit amet</p>
+          </li>
+          <li class="flex justify-center items-center gap-2">
+            <i class="fa-solid fa-check text-primary"></i>
+            <p>Lorem ipsum dolor sit amet</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
