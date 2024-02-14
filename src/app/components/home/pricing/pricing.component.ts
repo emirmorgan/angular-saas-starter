@@ -13,6 +13,10 @@ export class PricingComponent {
   plusPrice: number = 10;
   proPrice: number = 25;
 
+  toggleIsAnnually() {
+    this.isAnnually = !this.isAnnually;
+  }
+
   getDiscountedPrice(price: number): number {
     return this.isAnnually ? price * 0.8 : price;
   }

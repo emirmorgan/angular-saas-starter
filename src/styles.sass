@@ -32,17 +32,13 @@ $base-color: #F7F7F8
 $primary-color: #006AFF
 $secondary-color: #3287ff
 
-html
+html, body
     font-family: "Montserrat"
     background-color: $base-color
     height: 100%
-
-body
-    min-height: 100vh
-
-html, body
     position: relative
     overflow-x: clip
+    scroll-behavior: smooth !important
 
 @mixin BaseButton()
     display: inline-block
@@ -64,7 +60,7 @@ html, body
     @include BaseButton()
     background-color: $primary-color
     color: $base-color
-    
+
 .m-button-outline
     @include BaseButton()
     border: solid 1px

@@ -7,9 +7,16 @@
       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     </p>
   </div>
-  <div class="flex justify-center items-center mb-6 gap-2">
+  <div
+    class="flex justify-center items-center w-fit mx-auto cursor-pointer select-none mb-6 gap-2"
+    (click)="toggleIsAnnually()"
+  >
     <label class="switch">
-      <input type="checkbox" (change)="isAnnually = !isAnnually" />
+      <input
+        type="checkbox"
+        [checked]="isAnnually"
+        (click)="toggleIsAnnually()"
+      />
       <span class="slider"></span>
     </label>
     <div class="flex justify-center items-center gap-2">
@@ -23,7 +30,7 @@
     class="grid grid-cols-1 md:grid-cols-3 place-items-center items-start max-w-fit mx-auto gap-6"
   >
     <div class="pricing-box hover:scale-105">
-      <div class="flex flex-col gap-3">
+      <div class="flex flex-col select-none gap-3">
         <span>Free</span>
         <h3>$0 <span class="!text-sm">/mo</span></h3>
       </div>
@@ -43,13 +50,16 @@
       </div>
     </div>
     <div class="pricing-box hover:scale-105">
-      <div class="flex flex-col gap-3">
+      <div class="flex flex-col select-none gap-3">
         <span>Plus</span>
         <div class="flex items-center gap-2">
-          <h3>${{ getDiscountedPrice(plusPrice) }}</h3>
+          <h3>
+            ${{ getDiscountedPrice(plusPrice) }}
+            <span class="!text-sm">/mo</span>
+          </h3>
           <div
             *ngIf="isAnnually"
-            class="bg-primary w-fit text-white text-xs font-semibold select-none rounded-md p-2"
+            class="bg-primary w-fit text-white text-xs font-semibold rounded-md p-2"
           >
             -20%
           </div>
@@ -79,13 +89,16 @@
       </div>
     </div>
     <div class="pricing-box highlighted hover:scale-105">
-      <div class="flex flex-col gap-3">
+      <div class="flex flex-col select-none gap-3">
         <span>Pro</span>
         <div class="flex items-center gap-2">
-          <h3>${{ getDiscountedPrice(proPrice) }}</h3>
+          <h3>
+            ${{ getDiscountedPrice(proPrice) }}
+            <span class="!text-sm">/mo</span>
+          </h3>
           <div
             *ngIf="isAnnually"
-            class="bg-primary w-fit text-white text-xs font-semibold select-none rounded-md p-2"
+            class="bg-primary w-fit text-white text-xs font-semibold rounded-md p-2"
           >
             -20%
           </div>
