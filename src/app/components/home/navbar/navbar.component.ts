@@ -29,10 +29,16 @@ export class NavbarComponent {
     const screenWidth = event.target.innerWidth;
     if (screenWidth >= 768) {
       this.isMenuOpen = false;
+      document.body.style.overflow = '';
     }
   }
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
+    if (this.isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
   }
 }
