@@ -1,11 +1,12 @@
 import { Component, HostListener } from '@angular/core';
 
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.sass',
 })
@@ -29,16 +30,16 @@ export class NavbarComponent {
     const screenWidth = event.target.innerWidth;
     if (screenWidth >= 768) {
       this.isMenuOpen = false;
-      document.body.style.overflow = '';
+      document.documentElement.style.overflow = '';
     }
   }
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
     if (this.isMenuOpen) {
-      document.body.style.overflow = 'hidden';
+      document.documentElement.style.overflow = 'hidden';
     } else {
-      document.body.style.overflow = '';
+      document.documentElement.style.overflow = '';
     }
   }
 }
